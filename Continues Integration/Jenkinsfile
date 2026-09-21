@@ -1,0 +1,62 @@
+pipeline {
+    agent any
+
+    stages {
+
+        stage('Checkout') {
+            steps {
+                deleteDir()
+
+                git branch: 'main',
+                    url: 'https://github.com/vikrammr198-lgtm/loan-default-predictor.git'
+            }
+        }
+
+        stage('Build') {
+            steps {
+                bat 'npm ci'
+                bat 'npm run build'
+            }
+        }
+
+        stage('Test') {
+            steps {
+                bat 'npm run lint'
+            }
+        }
+
+        stage('Docker Build') {
+            steps {
+                bat 'docker build -t loan-default-predictor:%BUILD_NUMBER% .'
+            }
+        }
+
+        stage('Docker Tag') {
+            steps {
+                bat 'docker tag loan-default-predictor:%BUILD_NUMBER% vikram220057/loan-default-predictor:%BUILD_NUMBER%'
+            }
+        }
+
+        stage('Docker Push') {
+            steps {
+                withCredentials([
+                    usernamePassword(
+                        credentialsId: 'dockerhub-credentials',
+                        usernameVariable: 'DOCKER_USERNAME',
+                        passwordVariable: 'DOCKER_PASSWORD'
+                    )
+                ]) {
+                    bat 'docker login -u "%DOCKER_USERNAME%" -p "%DOCKER_PASSWORD%"'
+                    bat 'docker push vikram220057/loan-default-predictor:%BUILD_NUMBER%'
+                }
+            }
+        }
+
+        stage('Kubernetes Deploy') {
+            steps {
+                bat 'kubectl set image deployment/loan-default-predictor loan-default-predictor=vikram220057/loan-default-predictor:%BUILD_NUMBER%'
+                bat 'kubectl rollout status deployment/loan-default-predictor'
+            }
+        }
+    }
+}

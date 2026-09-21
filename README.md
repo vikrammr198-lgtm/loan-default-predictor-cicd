@@ -1,83 +1,74 @@
-# Loan Default Predictor
+# Loan Default Predictor — CI/CD
 
-A machine learning-based web application for predicting the likelihood of loan default.
+## Overview
 
-The project was developed as a full-stack application and extended with an automated CI/CD workflow using Jenkins, Docker, Docker Hub, and Kubernetes.
+This project demonstrates an end-to-end CI/CD pipeline for the Loan Default Predictor application.
 
----
+The pipeline connects source control, continuous integration, containerization, container image distribution, and container orchestration into an automated workflow.
 
-## Project Overview
-
-The Loan Default Predictor provides a web interface for submitting relevant loan and applicant information and obtaining a prediction from the trained machine learning model.
-
-The project was also used to understand how a software application moves from source code to a containerized and Kubernetes-deployed application through an automated CI/CD workflow.
-
----
-
-## Tech Stack
-
-### Application
-
-- React
-- TypeScript
-- Vite
-- Tailwind CSS
-- TanStack Start
-
-### DevOps & Deployment
+### Technologies Used
 
 - Git
 - GitHub
+- GitHub Webhooks
 - Jenkins
-- Groovy
 - Docker
 - Docker Hub
 - Kubernetes
-- Docker Desktop Kubernetes
-- GitHub Webhooks
+- kubectl
 - ngrok
-- npm
-- ESLint
 
 ---
 
-## CI/CD & DevOps
+## Original Application
 
-Implemented an end-to-end CI/CD workflow connecting source control, continuous integration, containerization, image publishing, and Kubernetes deployment.
+The CI/CD pipeline was built around the original Loan Default Predictor application.
 
-### CI/CD Workflow
+**Original Project Repository:**
+
+https://github.com/vikrammr198-lgtm/loan-default-predictor
+
+This repository focuses on the CI/CD and DevOps implementation of that application.
+
+---
+
+## Overall CI/CD Workflow
 
 ```text
+Developer
+    │
+    │ git push
+    ▼
 GitHub
-   │
-   │ Push
-   ▼
-GitHub Webhook
-   │
-   ▼
+    │
+    │ Webhook
+    ▼
 ngrok
-   │
-   ▼
+    │
+    ▼
 Jenkins
-   │
-   ├── Checkout
-   ├── Build
-   ├── Test
-   ├── Docker Build
-   ├── Docker Tag
-   └── Docker Push
-            │
-            ▼
-       Docker Hub
-            │
-            ▼
-     Kubernetes Deploy
-            │
-            ▼
-     Rolling Update
-            │
-            ▼
-      Application Pod
-            │
-            ▼
-       Kubernetes Service
+    │
+    ├── Checkout
+    ├── Build
+    ├── Test
+    ├── Docker Build
+    ├── Docker Tag
+    └── Docker Push
+              │
+              ▼
+         Docker Hub
+              │
+              ▼
+         Kubernetes
+              │
+              ▼
+         Deployment
+              │
+              ▼
+            Pod
+              │
+              ▼
+          Service
+              │
+              ▼
+       Running Application

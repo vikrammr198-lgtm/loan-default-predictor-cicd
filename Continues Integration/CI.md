@@ -145,13 +145,7 @@ Therefore, during development, **ngrok** is used to expose the local Jenkins ser
 
 ## GitHub Webhook Screenshot
 
-The screenshot should show:
-
-- Webhook configuration
-- Payload URL
-- Push event configuration
-- Active webhook
-- Successful delivery
+<img width="1917" height="895" alt="Screenshot 2026-09-22 174404" src="https://github.com/user-attachments/assets/8e0ea979-196b-452e-9713-ee6e0c497069" />
 
 ---
 
@@ -192,6 +186,8 @@ https://<ngrok-domain>/github-webhook/
 ```
 
 ngrok is mainly used here for **local development/testing**. In a production environment, Jenkins would normally be hosted on infrastructure that is directly reachable through an appropriate secure endpoint.
+
+<img width="1917" height="708" alt="Screenshot 2026-09-22 175418" src="https://github.com/user-attachments/assets/497a9bbf-561d-4287-88f6-fd7bda9e4327" />
 
 ---
 
@@ -538,7 +534,9 @@ Push Image
 
 ## Docker Hub Screenshot
 
-The screenshot should show the Docker Hub repository containing multiple build-number tags.
+The screenshot  show the Docker Hub repository containing multiple build-number tags.
+<img width="1917" height="981" alt="Screenshot 2026-09-22 175010" src="https://github.com/user-attachments/assets/b1d35702-6589-4b3c-a48d-6d98699cd263" />
+<img width="1917" height="985" alt="Screenshot 2026-09-22 175028" src="https://github.com/user-attachments/assets/91fefa30-2733-4be1-afe4-09a1bdf5c159" />
 
 For example:
 
@@ -616,7 +614,9 @@ A successful pipeline shows the stages completing successfully.
 
 ## Jenkins Stage View Screenshot
 
-The screenshot should show the final successful pipeline with stages similar to:
+<img width="1917" height="1010" alt="Screenshot 2026-09-20 230145" src="https://github.com/user-attachments/assets/ea96f5c6-6917-4765-b926-01114499bb6d" />
+
+The screenshot  show the final successful pipeline with stages similar to:
 
 ```text
 Checkout → Build → Test → Docker Build → Docker Tag → Docker Push → Kubernetes Deploy
@@ -663,7 +663,10 @@ This provides a simple traceability mechanism across the CI/CD pipeline.
 
 ## Jenkins Build History Screenshot
 
-The screenshot should show multiple Jenkins builds and their build numbers.
+The screenshot show multiple Jenkins builds and their build numbers.
+
+<img width="1917" height="1013" alt="Screenshot 2026-09-20 230035" src="https://github.com/user-attachments/assets/ebf895a3-dd8b-411c-87b6-3ff1faab6428" />
+<img width="1917" height="503" alt="Screenshot 2026-09-20 230112" src="https://github.com/user-attachments/assets/659e7535-48fd-40c2-8448-bfd9aa01bebd" />
 
 ---
 

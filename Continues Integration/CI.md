@@ -665,8 +665,8 @@ This provides a simple traceability mechanism across the CI/CD pipeline.
 
 The screenshot show multiple Jenkins builds and their build numbers.
 
-<img width="1917" height="1013" alt="Screenshot 2026-09-20 230035" src="https://github.com/user-attachments/assets/ebf895a3-dd8b-411c-87b6-3ff1faab6428" />
-<img width="1917" height="503" alt="Screenshot 2026-09-20 230112" src="https://github.com/user-attachments/assets/659e7535-48fd-40c2-8448-bfd9aa01bebd" />
+<img width="1917" height="941" alt="Screenshot 2026-09-22 174746" src="https://github.com/user-attachments/assets/b74c09e9-8915-4762-b54d-acd7d983585a" />
+<img width="1917" height="767" alt="Screenshot 2026-09-22 174806" src="https://github.com/user-attachments/assets/dfaa7a8d-ea9b-4571-8c71-f875a915e7eb" />
 
 ---
 

@@ -205,7 +205,9 @@ The exact Pod name changes whenever Kubernetes performs a new rollout.
 
 ## Kubernetes Pod Screenshot
 
-The screenshot should show:
+<img width="746" height="95" alt="Screenshot 2026-09-22 175236" src="https://github.com/user-attachments/assets/977db09a-3fe1-4946-92e3-ff8c9962cb0a" />
+
+The screenshot show:
 
 ```text
 kubectl get pods
@@ -348,7 +350,9 @@ Application
 
 ## Running Application Screenshot
 
-The screenshot should show the Loan Default Predictor application running successfully in the browser after Kubernetes port forwarding.
+<img width="1917" height="965" alt="Screenshot 2026-09-22 173930" src="https://github.com/user-attachments/assets/8e10f677-6b89-4d39-ac78-eb2aacba63d9" />
+
+The screenshot show the Loan Default Predictor application running successfully in the browser after Kubernetes port forwarding.
 
 ---
 
@@ -458,7 +462,9 @@ If the rollout does not complete successfully, Jenkins treats the deployment sta
 
 ## Kubernetes Rollout Screenshot
 
-The screenshot should show the rollout command and successful rollout message.
+<img width="1020" height="63" alt="Screenshot 2026-09-22 175315" src="https://github.com/user-attachments/assets/e51f1c46-40f3-4cca-a3e1-3e422bd2cfaa" />
+
+The screenshot show the rollout command and successful rollout message.
 
 For example:
 
@@ -496,7 +502,9 @@ This allows us to verify that Kubernetes is using the expected Docker image vers
 
 ## Kubernetes Deployment Screenshot
 
-The screenshot should show:
+<img width="1305" height="115" alt="Screenshot 2026-09-22 175201" src="https://github.com/user-attachments/assets/5a57a4b7-ff68-41b0-a084-75d4a569a51d" />
+
+The screenshot show:
 
 ```bash
 kubectl get deployment loan-default-predictor -o wide
